@@ -144,7 +144,7 @@ Try {
 
             $Shell = New-Object -ComObject ("WScript.Shell")
             $ShortCut = $Shell.CreateShortcut($env:ALLUSERSPROFILE + "\Microsoft\Windows\Start Menu\Programs\StartUp\IdleNotification.lnk")
-            $ShortCut.TargetPath = "C:\Program Files\SCConfigMgr Idle Notification\IdleNotification.exe"
+            $ShortCut.TargetPath = "C:\Program Files\IdleNotification\IdleNotification.exe"
             $ShortCut.WorkingDirectory = "C:\Program Files\IdleNotification"
             $ShortCut.WindowStyle = 1
             $ShortCut.IconLocation = "C:\Program Files\IdleNotification\IdleNotificationn.exe"
