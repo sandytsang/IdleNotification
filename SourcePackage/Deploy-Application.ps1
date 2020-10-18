@@ -119,12 +119,14 @@ Try {
         
         #Remove old installed Idle Notification
 		Get-Process "SCConfigMgr Idle Notification" -ErrorAction SilentlyContinue | stop-process -force
+		Get-Process "IdleNotification" -ErrorAction SilentlyContinue | stop-process -force
 
 	    # Remove any previous versions of SCConfigMgr Idel Notification
 	    Remove-MSIApplications -Name 'IdleNotification'
 			
 		Remove-Item -Path "C:\Program Files\SCConfigMgr Idle Notification" -Recurse -Force -ErrorAction SilentlyContinue
 		Remove-Item -Path "C:\Program Files (x86)\SCConfigMgr Idle Notification" -Recurse -Force -ErrorAction SilentlyContinue
+		Remove-Item -Path "C:\Program Files\IdleNotification" -Recurse -Force -ErrorAction SilentlyContinue
 			
         New-Item -Path "C:\Program Files" -Name "IdleNotification" -ItemType "Directory" -Force		
 		
